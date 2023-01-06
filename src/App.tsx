@@ -1,12 +1,13 @@
-import "./App.css";
-import RandomNumGenerator from "./components/RandomNumGenerator";
-import { ErrorBoundary } from "./components/ErrorBoundary";
+import React from 'react';
+import './App.css'
+import RandomNumGenerator from "./components/RandomNumberGenerator";
+import { ErrorBoundary } from './components/ErrorBoundary';
 import { useEffect, useState } from "react";
 
 function App() {
   const [random, setRandom] = useState(0);
 
-  const generate = () => {
+  const generate:()=>void = () => {
     setRandom(Math.floor(Math.random() * 20));
   };
 

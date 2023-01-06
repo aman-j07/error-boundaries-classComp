@@ -1,16 +1,26 @@
 import React from "react";
 
-export class ErrorBoundary extends React.Component {
-    constructor(props) {
+interface IProps {
+  children:React.ReactNode,
+  generate:()=>void,
+  random:number
+}
+
+interface IState {
+  hasError: boolean;
+}
+
+export class ErrorBoundary extends React.Component<IProps, IState> {
+    constructor(props:IProps) {
       super(props);
       this.state = { hasError: false};
     }
   
-    static getDerivedStateFromError(error) {
+    static getDerivedStateFromError(error:unknown) {
       return { hasError: true};
     }
   
-    componentDidCatch(error) {
+    componentDidCatch(error:unknown) {
       console.log(error)
     }
   

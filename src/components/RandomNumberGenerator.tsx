@@ -1,7 +1,11 @@
 import React, { Component, memo } from 'react'
 
-export class RandomNumGenerator extends Component {
+  interface IProps {
+    random:number,
+    generate:()=>void
+  }
 
+export class RandomNumGenerator extends Component<IProps> {
 
     componentDidUpdate(){
         if (this.props.random < 5) {
