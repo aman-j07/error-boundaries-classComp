@@ -17,7 +17,7 @@ export class RandomNumGenerator extends Component<IProps> {
     return (
       <>
         <h1>Number : {this.props.random}</h1>
-        <button onClick={this.props.generate}>Reset</button>
+        <button className='border-1' onClick={this.props.generate}>Generate</button>
       </>
     )
   }

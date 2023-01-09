@@ -15,7 +15,7 @@ function App() {
     generate();
   }, []);
   return (
-    <div className="App">
+    <div className="App p-3 mx-auto my-3 d-flex flex-column justify-content-between align-items-center">
       <ErrorBoundary random={random} generate={generate}>
         <RandomNumGenerator generate={generate} random={random}/>
       </ErrorBoundary>

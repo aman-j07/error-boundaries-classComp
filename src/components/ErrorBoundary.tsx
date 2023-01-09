@@ -26,7 +26,7 @@ export class ErrorBoundary extends React.Component<IProps, IState> {
   
     render() {
       if (this.state.hasError) {
-        return <><h1>Something went wrong</h1><button onClick={()=>{this.setState({hasError:false},()=>this.props.generate())}}>Reset</button></>;
+        return <><h2 className="text-danger">Something went wrong!</h2><h4>Random Number : {this.props.random} (Less than 5)</h4><button className="border-1" onClick={()=>{this.setState({hasError:false},()=>this.props.generate())}}>Re-Generate</button></>;
       }
   
       return this.props.children; 
